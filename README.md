@@ -1,4 +1,6 @@
+<div style="text-align: center;">
 <img align="center" src="https://user-images.githubusercontent.com/49995088/221280814-f0175bb7-0a58-4b8f-a752-fa18fbe86a0b.png">
+</div>
 
 <hr>
 
@@ -35,4 +37,4 @@ You need to have python installed to run this app.
 
 Follow the step by step after opening a terminal in the project directory you downloaded.<br>
 <code>python pip install -r requirements.txt</code><br>
-<code> python main.py </code>
+<code>python main.py </code>
