@@ -1,6 +1,4 @@
-<div style="align: center;">
-<img align="center" src="https://user-images.githubusercontent.com/49995088/221280814-f0175bb7-0a58-4b8f-a752-fa18fbe86a0b.png">
-</div>
+![ShinAPODApp](https://user-images.githubusercontent.com/49995088/221282896-1c5978b7-de53-4018-a196-bb38ddbbab1e.png)
 
 <hr>
 
