@@ -15,7 +15,7 @@ class Apod():
 
     def get_image(self):
         if self.response is not None:
-            if self.response['hdurl'] is not None:
+            if 'hdurl' in self.response and self.response['hdurl'] is not None:
                 file_path = os.path.join('cache/imgs/')
                 file_name = self.response['hdurl'].split("/")[-1]
                 res = requests.get(self.response['hdurl'])
@@ -24,7 +24,7 @@ class Apod():
                         file.write(res.content)
                         file.close()
                 return file_path + file_name
-            elif self.response['url'] is not None:
+            elif 'hdurl' in self.response and self.response['url'] is not None:
                 file_path = os.path.join('cache/imgs/')
                 file_name = self.response['url'].split("/")[-1]
                 res = requests.get(self.response['url'])
@@ -37,19 +37,19 @@ class Apod():
             return None
 
     def get_title(self):
-        if self.response is not None:
+        if 'title' in self.response and self.response is not None:
             return self.response['title']
         else:
             return None
 
     def get_date(self):
-        if self.response is not None:
+        if 'date' in self.response and self.response is not None:
             return self.response['date']
         else:
             return None
 
     def get_description(self):
-        if self.response is not None:
+        if 'explanation' in self.response and self.response is not None:
             return self.response['explanation']
         else:
             return None

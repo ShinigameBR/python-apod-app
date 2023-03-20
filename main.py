@@ -75,8 +75,10 @@ class App(customtkinter.CTk):
 
         else:
             # getting the data from API
-            self.apod_today_image = Image.open(
-                self.apod.get_image())
+            try:
+                self.apod_today_image = Image.open(self.apod.get_image())
+            except:
+                self.apod_today_image = Image.open(os.path.join(static_image_path, "noimage.png"))
             self.apod_today_title = self.apod.get_title()
             self.apod_today_date = self.apod.get_date()
             self.apod_today_description = self.apod.get_description()
@@ -204,8 +206,10 @@ class App(customtkinter.CTk):
 
         else:
             # getting the data from API
-            self.apod_search_image = Image.open(
-                self.apod.get_image())
+            try:
+                self.apod_search_image = Image.open(self.apod.get_image())
+            except:
+                self.apod_today_image = Image.open(os.path.join(self.static_image_path, "noimage.png"))
             self.apod_search_title = self.apod.get_title()
             self.apod_search_date = self.apod.get_date()
             self.apod_search_description = self.apod.get_description()
